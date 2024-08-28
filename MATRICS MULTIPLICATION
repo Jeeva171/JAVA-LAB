@@ -1,0 +1,133 @@
+
+JEEVA TREESA GEORGE <jeevatreesageorge2027@cs.sjcetpalai.ac.in>
+Sat, Aug 17, 3:52 PM (11 days ago)
+to me
+
+import java.util.Scanner;
+
+public class MarticsMultiplication {
+
+public static void main(String [] args) {
+
+	Scanner sc=new Scanner(System.in);
+
+	System.out.println("enter the row of first matrics");
+
+	int m1=sc.nextInt();
+
+	System.out.println("enter the coloum of first matrics");
+
+	int n1=sc.nextInt();
+
+	System.out.println("enter the  row of second matrics");
+
+	int m2=sc.nextInt();
+
+	System.out.println("enter the coloum of second matrics");
+
+	int n2=sc.nextInt();
+
+	if(m1!=n2)
+
+	{
+
+		System.out.println("multiplication is not possible");
+
+	}
+
+	int A[][]=new int[m1][n1];
+
+	int B[][]=new int[m2][n2];
+
+	int C[][]=new int[m1][n2];
+
+	System.out.println("Read matrics A");
+
+	for(int i=0;i<m1;i++){
+
+		for(int j=0;j<n1;j++) {
+
+			System.out.println("A["+i+"]["+j+"]");
+
+			A[i][j]=sc.nextInt();
+
+		}
+
+	}
+
+	System.out.println("Read matrics B");
+
+	for(int i=0;i<m2;i++){
+
+		for(int j=0;j<n2;j++) {
+
+			System.out.println("B["+i+"]["+j+"]");
+
+			B[i][j]=sc.nextInt();
+
+		}
+
+	}
+
+	for(int i=0;i<m1;i++){
+
+		for(int j=0;j<n2;j++) {
+
+			C[i][j]=0;
+
+			for(int k=0;k<n1;k++)
+
+			{
+
+				C[i][j]=A[i][k]*B[k][j];
+
+			}
+
+		}}
+
+	System.out.println("matrics A is");
+
+	for(int i=0;i<m1;i++){
+
+		for(int j=0;j<n1;j++) {
+
+			System.out.println(A[i][j]+"\t");
+
+		}
+
+			System.out.println();
+
+	}
+
+	System.out.println("matrics B is");
+
+	for(int i=0;i<m1;i++){
+
+		for(int j=0;j<n1;j++) {
+
+			System.out.println(B[i][j]+"\t");
+
+		}
+
+	}
+
+	System.out.println("multiplied matrics is");
+
+	for(int i=0;i<m1;i++){
+
+		for(int j=0;j<n2;j++) {
+
+			System.out.println(C[i][j]+"\t");
+
+		}
+
+			System.out.println();
+
+	}	
+
+}
+
+}
+
+
+
