@@ -1,164 +1,121 @@
-package module1;
-
 import java.util.Scanner;
+class Employee 
+{
+String name;
+int age;
+long phonenumber;
+String address;
+float salary;
+Employee(String name1,int age1,long phonenumber1,String address1,float salary1)
+{
+name=name1;
+age=age1;
+phonenumber=phonenumber1;
+address=address1;
+salary=salary1;
+}
+void printEmployee()
+{
+System.out.println("Name:"+name);
+System.out.println("Age:"+age);
+System.out.println("Phone number:"+phonenumber);
+System.out.println("Address"+address);
+}
+void printSalary()
+{
 
-class Employee3{
+System.out.println("Salary:"+salary);
+}
+}
+class Officer extends Employee 
+{
+String specialization;
+Officer(String name1,int age1,long phonenumber1,String address1,float
 
-	String name=new String();
+salary1,String specialization1)
 
-	int age;
+{
+super(name1,age1,phonenumber1,address1,salary1);
+specialization=specialization1;
+}
+void printSpecialization()
+{
+System.out.println("Specialization="+specialization);
 
-	int phoneno;
+}
+}
+class Manager extends Employee 
+{
+String department;
+Manager(String name1,int age1,long phonenumber1,String address1,float
 
-	String address;
+salary1,String department1)
+{
+super(name1,age1,phonenumber1,address1,salary1);
+department=department1;
+}
+void printDepartment()
+{
+System.out.println("Department="+department);
+}
+}
 
-	int salary;
+public class Inheritance1
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+int age;
+String name,address,specialization,department;
+float salary;
+long phonenumber;
+System.out.println("Enter the details of Officer");
+System.out.println("Enter Name:");
+name=sc.next();
+System.out.println("Enter Age:");
+age=sc.nextInt();
+System.out.println("Enter Phone number:");
+phonenumber=sc.nextLong();
+System.out.println("Enter Address:");
+address=sc.next();
+System.out.println("Enter Salary:");
+salary=sc.nextFloat();
+System.out.println("Enter Specialization:");
+specialization=sc.next();
 
-	void printsalary() {
+Officer o=new Officer(name,age,phonenumber,address,salary,specialization);
 
-		System.out.print("\nsalary "+salary);
+System.out.println("Enter details of Manager:");
+System.out.println("Enter Name:");
+name=sc.next();
+System.out.println("Enter Age:");
+age=sc.nextInt();
+System.out.println("Enter Phone number:");
+
+phonenumber=sc.nextLong();
+System.out.println("Enter Address:");
+address=sc.next();
+System.out.println("Enter Salary:");
+salary=sc.nextFloat();
+System.out.println("Enter the Department ");
+department=sc.next();
+
+Manager m=new Manager(name,age,phonenumber,address,salary,department);
+
+System.out.println("DETAILS OF OFFICER");
+o.printEmployee();
+o.printSalary();
+o.printSpecialization();
+
+System.out.println("DETAILS OF MANAGER");
+m.printEmployee();
+m.printSalary();
+m.printDepartment();
+}}
 
 
-	}
-
-	void printEmployee() {
-
-		System.out.print("\nname:"+name);
-
-		System.out.print("\nage:"+age);
-
-		System.out.print("\nphone no: "+phoneno);
 
 		
 
-		System.out.print("\naddress "+address);
-
-	}
-
- }
-
-class Officier extends Employee3{
-
-	String special;
-
-	void printspecial(){
-
-		System.out.print("\nspecialisation "+ special);
-
-	
-
-}
-
-}
-
-class Manager1 extends Employee3{
-
-	String depart=new String();
-
-	void printdepart() {
-
-		System.out.print("\ndepartment "+ depart);
-
 		
-
-	}
-
-}
-
-	
-
-public class InheritanceExample {
-
-
-	public static void main(String[] args) {
-
-		// TODO Auto-generated method stub
-
-		Scanner sc=new Scanner(System.in);
-
-		Officier o=new Officier();
-
-		Manager1 m=new Manager1();
-
-	    
-
-	    System.out.print("\nenter officier's name:");
-
-	    o.name=sc.nextLine();
-
-	    System.out.print("\nenter specialisation: ");
-
-	    o.special=sc.nextLine();
-
-	    System.out.print("\nenter age:");
-
-	    o.age=sc.nextInt();
-
-	    System.out.print("\nenter phoneno:");
-
-	    o.phoneno=sc.nextInt();
-
-	    sc.nextLine();
-
-	    System.out.print("\nenter adress:");
-
-	    o.address=sc.nextLine();
-
-	    System.out.print("\nenter the salary:");
-
-	    o.salary=sc.nextInt();
-
-	    System.out.print("office details");
-
-	    o.printEmployee();
-
-	    o.printsalary();
-
-	    o.printspecial();
-
-	    
-
-	    System.out.print("\n enter the officier details: ")	;
-
-	    sc.nextLine();
-
-	    System.out.print("\nenter name:");
-
-	    m.name=sc.nextLine();
-
-	    System.out.print("\nenter age:");
-
-	    m.age=sc.nextInt();
-
-	    System.out.print("\nenter phoneno:");
-
-	    m.phoneno=sc.nextInt();
-
-	    sc.nextLine();
-
-	    System.out.print("\nenter adress:");
-
-	    m.address=sc.nextLine();
-
-	    System.out.print("\nenter the salary:");
-
-	    m.salary=sc.nextInt();
-
-	    sc.nextLine();
-
-	    System.out.print("\nenter department: ");
-
-	    m.depart=sc.nextLine();
-
-	    System.out.print("manager details");
-
-	    m.printEmployee();
-
-	    m.printsalary();
-
-	    m.printdepart();
-
-	}
-
-
-}
+		
