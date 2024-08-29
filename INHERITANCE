@@ -1,0 +1,164 @@
+package module1;
+
+import java.util.Scanner;
+
+class Employee3{
+
+	String name=new String();
+
+	int age;
+
+	int phoneno;
+
+	String address;
+
+	int salary;
+
+	void printsalary() {
+
+		System.out.print("\nsalary "+salary);
+
+
+	}
+
+	void printEmployee() {
+
+		System.out.print("\nname:"+name);
+
+		System.out.print("\nage:"+age);
+
+		System.out.print("\nphone no: "+phoneno);
+
+		
+
+		System.out.print("\naddress "+address);
+
+	}
+
+ }
+
+class Officier extends Employee3{
+
+	String special;
+
+	void printspecial(){
+
+		System.out.print("\nspecialisation "+ special);
+
+	
+
+}
+
+}
+
+class Manager1 extends Employee3{
+
+	String depart=new String();
+
+	void printdepart() {
+
+		System.out.print("\ndepartment "+ depart);
+
+		
+
+	}
+
+}
+
+	
+
+public class InheritanceExample {
+
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+
+		Officier o=new Officier();
+
+		Manager1 m=new Manager1();
+
+	    
+
+	    System.out.print("\nenter officier's name:");
+
+	    o.name=sc.nextLine();
+
+	    System.out.print("\nenter specialisation: ");
+
+	    o.special=sc.nextLine();
+
+	    System.out.print("\nenter age:");
+
+	    o.age=sc.nextInt();
+
+	    System.out.print("\nenter phoneno:");
+
+	    o.phoneno=sc.nextInt();
+
+	    sc.nextLine();
+
+	    System.out.print("\nenter adress:");
+
+	    o.address=sc.nextLine();
+
+	    System.out.print("\nenter the salary:");
+
+	    o.salary=sc.nextInt();
+
+	    System.out.print("office details");
+
+	    o.printEmployee();
+
+	    o.printsalary();
+
+	    o.printspecial();
+
+	    
+
+	    System.out.print("\n enter the officier details: ")	;
+
+	    sc.nextLine();
+
+	    System.out.print("\nenter name:");
+
+	    m.name=sc.nextLine();
+
+	    System.out.print("\nenter age:");
+
+	    m.age=sc.nextInt();
+
+	    System.out.print("\nenter phoneno:");
+
+	    m.phoneno=sc.nextInt();
+
+	    sc.nextLine();
+
+	    System.out.print("\nenter adress:");
+
+	    m.address=sc.nextLine();
+
+	    System.out.print("\nenter the salary:");
+
+	    m.salary=sc.nextInt();
+
+	    sc.nextLine();
+
+	    System.out.print("\nenter department: ");
+
+	    m.depart=sc.nextLine();
+
+	    System.out.print("manager details");
+
+	    m.printEmployee();
+
+	    m.printsalary();
+
+	    m.printdepart();
+
+	}
+
+
+}
